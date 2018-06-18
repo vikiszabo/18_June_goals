@@ -8,6 +8,10 @@ def index():
     return render_template('main.html',  mimetype="text/html")
 
 
+@app.route('/june18')
+def june18():
+    return render_template('june18.html')
+
 def main():
     app.run(debug=True)
 

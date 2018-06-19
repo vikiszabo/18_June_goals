@@ -7,12 +7,11 @@ import itertools
 
 
 def to_camel_case(text):
-    text.split('-')
-    for index, c in enumerate(text):
+    for index in range(0, len(text)):
         if text[index] == '-':
-            str = text[:index] + text[index+1].upper() + text[index+1:]
-            str = text.replace('-', '')
-    return str
+            str = text[:index+1] + text[index+1].upper() + text[index+2:]
+            strr = text.replace('-', '')
+    return strr
 
 
 

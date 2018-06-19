@@ -7,13 +7,14 @@ string to list
 list to string
 '''
 
-str1 = "hello-world"
+str1 = "hello-bello-world"
 
 def remove_c(string):
-    for i in range(0, len(string)):
-        if (string[i] == '-') or (string[i] == '_'):
-            ns = string[:i+1] + string[i+1].upper() + string[i+2:]
-            nns = ns.replace('-', ' ')
+    ns = string
+    for i in range(0, len(ns)):
+        if (ns[i] == '-'):
+            ns = ns[:i+1] + ns[i+1].upper() + ns[i+2:]
+    nns = ns.replace('-', '')
     return nns
 
 
@@ -24,12 +25,11 @@ def rem(str):
     for i in range(0, len(str)):
         if str[i] == '-':
             c = str[i+1].upper()
-
             res.append(c)
+
         else:
             res.append(str[i])
 
     return ''.join(res)
 
-
-print(rem(str1))
+#print(rem(str1))
